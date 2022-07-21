@@ -30,7 +30,7 @@ myKeys =
   ]
 
 myWorkspaces :: [String]
-myWorkspaces = reverse [[c] | c <- ['1' .. '9']]
+myWorkspaces = show <$> reverse [1..9]
 
 myWSKeys :: [(String, X ())]
 myWSKeys = [("M-" ++ n, windows $ W.greedyView n) | n <- myWorkspaces]
